@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="{% url 'user:user_registration' %}" method="post" enctype="multipart/form-data" autocomplete="off" novalidate>
+        {% csrf_token %}
+        <p>Fist name</p>
+            {{ form.first_name }}
+        <p>Last name</p>
+            {{ form.last_name }}
+        <p>Email name</p>
+            {{ form.email }}
+        <p>Phone number</p>
+            {{ form.phone_number }}
+        <p>Password</p>
+            {{ form.password1 }}
+        <p>Confirm Password</p>
+            {{ form.password2 }}
+        <button type="submit" name="action">
+            register
+        </button>
+    </form>
+
+</body>
+</html>

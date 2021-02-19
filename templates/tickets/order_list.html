@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <li class="nav-item">
+        <a href="?length=year">Year</a>
+        </li>
+        <li class="nav-item">
+            <a href="?length=month">Month</a>
+        </li>
+        <li class="nav-item">
+            <a href="?length=week">Week</a>
+        </li>
+
+
+    This will display tickets
+    <br/>
+    <br/>
+
+    {% for order in orders %}
+        <div class="orders">
+            {{ order }}
+        </div>
+        <br/>
+    {% endfor %}
+</body>
+</html>
